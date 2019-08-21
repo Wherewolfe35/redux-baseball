@@ -5,7 +5,7 @@ class TotalPitchers extends Component {
   state = {  }
   render() { 
     return ( 
-      <div>Total Pitchers: {this.props.reduxStore.pitcherReducer.length}</div>
+      <div>Total Pitchers: {this.props.reduxStore.pitcherReducer.pitchers.length}</div>
      );
   }
 }

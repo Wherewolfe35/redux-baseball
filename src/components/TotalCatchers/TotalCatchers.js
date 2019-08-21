@@ -5,7 +5,7 @@ class TotalCatchers extends Component {
   state = {  }
   render() { 
     return (
-      <div>Total Catchers: {this.props.reduxStore.catcherReducer.length}</div>
+      <div>Total Catchers: {this.props.reduxStore.catcherReducer.catchers.length}</div>
     );
   }
 }
