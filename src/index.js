@@ -10,7 +10,13 @@ const pitcherList = ['Maud Nelson', 'Ila Borders', 'Don Newcombe', 'CC Sabathia'
 const catcherList= ['Roy Campanella', 'Elston Howard', 'Kenji Jojima'];
 
 const pitcherReducer = (state = pitcherList, action) => {
-  return state;
+  switch (action.type) {
+    case 'ADD_PITCHER':
+      return [...state, action.payload];
+  
+    default:
+      return state;
+  }
 }
 
 const catcherReducer = (state = catcherList, action) => {

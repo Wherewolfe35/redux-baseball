@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TotalPitchers from "../TotalPitchers/TotalPitchers";
 import TotalCatchers from "../TotalCatchers/TotalCatchers";
 import PitcherList from "../PitcherList/PitcherList"
+import PitcherForm from "../PitcherForm/PitcherForm";
 
 
 class App extends Component {
@@ -63,15 +64,7 @@ class App extends Component {
         <TotalPitchers />
         <TotalCatchers />
         <h3>All Pitchers</h3>
-        <form onSubmit={this.handlePitcherSubmit}>
-          <input
-            type="text"
-            value={this.state.newPitcher}
-            onChange={this.handlePitcherNameChange}
-            placeholder="New Pitcher Name"
-          />
-          <button type="submit">Add Pitcher</button>
-        </form>
+        <PitcherForm />
         <PitcherList />
         <h3>All Catchers</h3>
         <form onSubmit={this.handleCatcherSubmit}>
