@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import TotalPitchers from "../TotalPitchers/TotalPitchers";
 import TotalCatchers from "../TotalCatchers/TotalCatchers";
-import PitcherList from "../PitcherList/PitcherList"
+import PitcherList from "../PitcherList/PitcherList";
 import PitcherForm from "../PitcherForm/PitcherForm";
+import CatcherList from "../CatcherList/CatcherList";
+import CatcherForm from "../CatcherForm/CatcherForm";
 
 
 class App extends Component {
@@ -67,24 +69,8 @@ class App extends Component {
         <PitcherForm />
         <PitcherList />
         <h3>All Catchers</h3>
-        <form onSubmit={this.handleCatcherSubmit}>
-          <input
-            type="text"
-            value={this.state.newCatcher}
-            onChange={this.handleCatcherNameChange}
-            placeholder="New Catcher Name"
-          />
-          <button type="submit">Add Catcher</button>
-        </form>
-        <ul>
-          {this.state.catcherList.map(catcher => (
-            <li
-              onClick={this.handleCatcherSelectClick(catcher)}
-            >
-              {catcher}
-            </li>
-          ))}
-        </ul>
+        <CatcherForm />
+        <CatcherList />
       </div>
     );
   }

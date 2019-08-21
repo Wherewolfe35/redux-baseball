@@ -20,7 +20,12 @@ const pitcherReducer = (state = pitcherList, action) => {
 }
 
 const catcherReducer = (state = catcherList, action) => {
-  return state;
+  switch (action.type) {
+    case "ADD_CATCHER":
+      return [...state, action.payload]
+    default:
+      return state;
+  }
 }
 
 const store = createStore(
